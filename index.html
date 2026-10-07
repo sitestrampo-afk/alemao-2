@@ -1,451 +1,621 @@
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8">
-		<title>EndLista</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<base href="https://endlista.com.br/" />
-					<meta name="description" content="Endlista é a lista de consulta!" />
-									<link href="assets/favicon.png" rel="icon" />
-												<link rel="preload" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-			<noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"   media="screen"  /></noscript>
-											<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-			<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"   media="screen"  /></noscript>
-											<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-			<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"   media="screen"  /></noscript>
-											<link rel="preload" href="https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-			<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500,600&display=swap"   media="screen"  /></noscript>
-											<link rel="preload" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-			<noscript><link rel="stylesheet" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/style.css"   media="screen"  /></noscript>
-											<link rel="preload" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/js/simpleAutoComplete.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-			<noscript><link rel="stylesheet" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/js/simpleAutoComplete.css"   media="screen"  /></noscript>
-										<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-					<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
-					<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-					<script type="text/javascript" src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/js/simpleAutoComplete.js"></script>
-					<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/parsleyjs@2.8.1,npm/parsleyjs@2.8.1/dist/i18n/pt-br.min.js"></script>
-				
-		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/exacti/floating-labels@latest/floating-labels.min.css" media="screen">
 
-		<style>
-			:root{
-				--outline-border-color: var(--endlista-color-2);
-			}
-		</style>
+<head>
+    <meta charset="UTF-8">
+    <title>EndLista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Endlista é a lista de consulta!" />
+    <link href="https://endlista.com.br/assets/favicon.png" rel="icon" />
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"   media="screen"  /></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"   media="screen"  /></noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"   media="screen"  /></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500,600&display=swap"   media="screen"  /></noscript>
+    <link rel="preload" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/style.css"   media="screen"  /></noscript>
+    <link rel="preload" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/js/simpleAutoComplete.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/js/simpleAutoComplete.css"   media="screen"  /></noscript>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/js/simpleAutoComplete.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/parsleyjs@2.8.1,npm/parsleyjs@2.8.1/dist/i18n/pt-br.min.js"></script>
 
-		<script>
-			/*if ("serviceWorker" in navigator) {
-				window.addEventListener("load", function () {
-					navigator.serviceWorker.register("/assets/js/service-worker.js");
-				});
-			}*/
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/exacti/floating-labels@latest/floating-labels.min.css" media="screen">
 
-			var installPromptEvent;
+    <style>
+         :root {
+            --outline-border-color: var(--endlista-color-2);
+        }
+    </style>
 
-			window.addEventListener('beforeinstallprompt', (event) => {
-				// Prevent Chrome <= 67 from automatically showing the prompt
-				//event.preventDefault();
-				// Stash the event so it can be triggered later.
-				installPromptEvent = event;
-				// Update the install UI to notify the user app can be installed
-				//document.querySelector('#install-button').disabled = false;
+    <script>
+        /*if ("serviceWorker" in navigator) {
+        				window.addEventListener("load", function () {
+        					navigator.serviceWorker.register("/assets/js/service-worker.js");
+        				});
+        			}*/
 
-			});
+        var installPromptEvent;
 
-			//installPromptEvent.prompt();
+        window.addEventListener('beforeinstallprompt', (event) => {
+            // Prevent Chrome <= 67 from automatically showing the prompt
+            //event.preventDefault();
+            // Stash the event so it can be triggered later.
+            installPromptEvent = event;
+            // Update the install UI to notify the user app can be installed
+            //document.querySelector('#install-button').disabled = false;
 
-			$(document).ready(function(){
-				$("#termo").simpleAutoComplete("https://endlista.com.br/index.php?route=pesq/query/procura");
+        });
 
-				$("#local").simpleAutoComplete("https://endlista.com.br/index.php?route=pesq/query/cidades");
+        //installPromptEvent.prompt();
 
-				getLocation();
-			});
+        $(document).ready(function() {
+            $("#termo").simpleAutoComplete("https://endlista.com.br/index.php?route=pesq/query/procura");
 
-			function getLocation() {
-				$.ajax({
+            $("#local").simpleAutoComplete("https://endlista.com.br/index.php?route=pesq/query/cidades");
 
-					type: "GET",
-					url: 'https://endlista.com.br/index.php?route=common/geo/get',
-					async: false,
-					cache: true,
-					global: false,
-					dataType: 'json',
-					success: function(json) {
+            getLocation();
+        });
 
-						// data is ur summary
-						if(json.data != null ) {
-							$("#local").val(json.data.city);
-						} else {
-							if (navigator.geolocation) {
-								navigator.geolocation.getCurrentPosition(showPosition);
-							} else {
-								//x.innerHTML = "Geolocation is not supported by this browser.";
-							}
-						}
-					}
+        function getLocation() {
+            $.ajax({
 
+                type: "GET",
+                url: 'https://endlista.com.br/index.php?route=common/geo/get',
+                async: false,
+                cache: true,
+                global: false,
+                dataType: 'json',
+                success: function(json) {
 
-				});
+                    // data is ur summary
+                    if (json.data != null) {
+                        $("#local").val(json.data.city);
+                    } else {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            //x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                    }
+                }
 
 
-			}
-
-			function showPosition(position) {
-				$.ajax({
-
-					type: "GET",
-					url: 'https://nominatim.openstreetmap.org/reverse',
-					data: "format=json&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude, // appears as $_GET['id'] @ ur backend side
-					async: false,
-					cache: true,
-					global: false,
-					dataType: 'json',
-					success: function(json) {
-
-						$("#local").val(json.address.city);
-						storeGeo(json.address, position);
-					}
+            });
 
 
-				});
+        }
 
-			}
+        function showPosition(position) {
+            $.ajax({
 
-			function storeGeo(data, position) {
-				console.log(data);
+                type: "GET",
+                url: 'https://nominatim.openstreetmap.org/reverse',
+                data: "format=json&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude, // appears as $_GET['id'] @ ur backend side
+                async: false,
+                cache: true,
+                global: false,
+                dataType: 'json',
+                success: function(json) {
 
-				$.ajax({
-
-					type: "POST",
-					url: 'https://endlista.com.br/index.php?route=common/geo/put',
-					data: {data:data},
-					cache: true,
-					dataType: 'json',
-
-				});
-
-			}
-
-			function exibePesq() {
-				let elemt = $('#barraPesquisa');
-
-				if(elemt.hasClass('d-none')) {
-					elemt.removeClass('d-none');
-				} else {
-					elemt.addClass('d-none');
-				}
-			}
-		</script>
-	</head>
-	<body>
+                    $("#local").val(json.address.city);
+                    storeGeo(json.address, position);
+                }
 
 
-				<header class="home">
-			<div class="container">
-				<nav class="navbar navbar-expand-lg navbar-dark home">
-					<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            });
+
+        }
+
+        function storeGeo(data, position) {
+            console.log(data);
+
+            $.ajax({
+
+                type: "POST",
+                url: 'https://endlista.com.br/index.php?route=common/geo/put',
+                data: {
+                    data: data
+                },
+                cache: true,
+                dataType: 'json',
+
+            });
+
+        }
+
+        function exibePesq() {
+            let elemt = $('#barraPesquisa');
+
+            if (elemt.hasClass('d-none')) {
+                elemt.removeClass('d-none');
+            } else {
+                elemt.addClass('d-none');
+            }
+        }
+    </script>
+    <style id="endlista-theme">
+        html:root {
+            --endlista-color-1: #14532d;
+            --endlista-color-2: #1e64de;
+            --endlista-color-4: #227443;
+            --endlista-color-5: #93b3eb;
+            --endlista-color-7: #e8f3ec;
+            --endlista-color-8: #e1eaf8;
+            --endlista-color-11: #184191;
+            --endlista-color-13: #0f3578;
+        }
+        
+        body header.home {
+            background: linear-gradient(135deg, #1e64de 0%, #0f3578 60%, #14532d 100%);
+        }
+        
+        html { scroll-behavior: smooth; }
+        .content-section { padding: 80px 0; scroll-margin-top: 24px; }
+        .section-soft { background: #f2f6fc; }
+        .section-heading { max-width: 650px; margin: 0 auto 40px; text-align: center; }
+        .section-heading h2 { color: #184191; font-weight: 600; }
+        .section-heading p { color: #4b5466; font-size: 1.1rem; }
+        .section-label { display: block; color: #14532d; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+        .step-card { background: #fff; padding: 32px; border: 1px solid #e1eaf8; border-radius: 16px; }
+        .step-number { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: #e8f3ec; color: #14532d; border-radius: 50%; font-size: 1.25rem; font-weight: 600; margin-bottom: 24px; }
+        .step-card h3 { color: #184191; font-size: 1.35rem; }
+        .step-card p { margin-bottom: 0; color: #4b5466; line-height: 1.8; }
+        .business-banner { background: linear-gradient(120deg, #0f3578, #14532d); color: #fff; }
+        .business-banner .section-label { color: #b9e6ca; }
+        .business-banner h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; }
+        .business-banner p { font-size: 1.1rem; line-height: 1.8; }
+        .business-banner .banner-button { background: #fff; color: #14532d; border: 2px solid #fff; padding: 14px 24px; font-weight: 600; white-space: normal; }
+        .business-banner .banner-button:hover { background: #e8f3ec; color: #0d3b20; }
+        .business-checklist { list-style: none; padding: 32px; margin: 0; border: 1px solid rgba(255,255,255,.3); border-radius: 16px; background: rgba(255,255,255,.08); }
+        .business-checklist li { display: flex; gap: 14px; padding: 14px 0; font-size: 1.1rem; }
+        .business-checklist i { color: #b9e6ca; margin-top: 5px; }
+        .benefit-list { list-style: none; padding: 0; margin: 24px 0 0; }
+        .benefit-list li { margin-bottom: 16px; display: flex; gap: 12px; line-height: 1.7; }
+        .benefit-list i { color: #14532d; margin-top: 5px; }
+        .benefit-panel { padding: 36px; background: #e8f3ec; border-radius: 20px; }
+        .benefit-panel h3 { color: #14532d; }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-list details { background: #fff; border: 1px solid #e1eaf8; border-radius: 12px; margin-bottom: 14px; }
+        .faq-list summary { padding: 22px; cursor: pointer; color: #184191; font-size: 1.1rem; font-weight: 600; }
+        .faq-list details[open] summary { border-bottom: 1px solid #e1eaf8; }
+        .faq-list details p { padding: 20px 22px; margin: 0; line-height: 1.8; }
+        .faq-list summary:focus-visible { outline: 3px solid #1e64de; outline-offset: 3px; }
+        @media (max-width: 767px) {
+            .content-section { padding: 56px 0; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .step-card, .benefit-panel, .business-checklist { padding: 24px; }
+        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        
+        body a:hover,
+        body footer#footer a:hover {
+            color: #14532d;
+        }
+        
+        body .btn.btn-laranja:hover,
+        body .btn.btn-laranja:focus,
+        body .btn.btn-laranja-outline:hover,
+        body .btn.btn-laranja-outline:focus {
+            background-color: #0d3b20;
+            border-color: #0d3b20;
+            color: #fff;
+        }
+        
+        body .btn:focus-visible,
+        body a:focus-visible {
+            outline: 3px solid #93b3eb;
+            outline-offset: 3px;
+        }
+        
+        footer#footer .company-details {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-top: 1px solid #e1eaf8;
+            overflow-wrap: anywhere;
+        }
+        
+        footer#footer .company-details p {
+            margin-bottom: .5rem;
+        }
+        
+        footer#footer .company-details p:first-child {
+            color: #14532d;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="home">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark home">
+                <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 						<i class="fas fa-bars fa-2x"></i>
 					</button>
-					<a class="navbar-brand" href="https://endlista.com.br/home"><img src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/endlista/imagens/logoEndListaPrancheta%201.png" srcset="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/endlista/imagens/logoEndListaPrancheta%201@2x.png 2x, https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/endlista/imagens/logoEndListaPrancheta%201@3x.png 3x" width="100%" alt="Logo" /></a>
-					<a class="nav-search-helper d-lg-none d-xl-none" href="#"></a>
-					<div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#appRoda"> Baixe o app</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="https://endlista.com.br/index.php?route=contact/contato"> Contato</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="https://endlista.com.br/index.php?route=anunciante/painel"> Painel do Anunciante</a>
-							</li>
-							
-							<li class="nav-item">
-								<a class="nav-link btn btn-laranja" href="https://endlista.com.br/index.php?route=anunciante/cadastro"> Anuncie seu negócio</a>
-							</li>
+                <a class="navbar-brand" href="https://endlista.com.br/home"><img src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/endlista/imagens/logoEndListaPrancheta%201.png" srcset="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/endlista/imagens/logoEndListaPrancheta%201@2x.png 2x, https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/endlista/imagens/logoEndListaPrancheta%201@3x.png 3x"
+                        width="100%" alt="Logo" /></a>
+                <a class="nav-search-helper d-lg-none d-xl-none" href="#"></a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#como-funciona"> Como funciona</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#duvidas"> Dúvidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://endlista.com.br/index.php?route=contact/contato"> Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://endlista.com.br/index.php?route=anunciante/painel"> Painel do Anunciante</a>
+                        </li>
 
-													</ul>
-					</div>
-				</nav>
-				
-				<div id="homeSearch" class="row text-center mb-5">
-					<div class="col-md-7 mx-auto my-5">
-						<h1 class="my-4 mt-5">Busque empresas...</h1>
-						<form id="search" name="search" class="needs-validation" action="https://endlista.com.br/pesquisar" method="get" autocomplete="off">
-							<div class="form-row">
-								<div class="col-md my-3">
-									<div class="form-label-group">
-										<input type="text" name="termo" id="termo" required class="form-control form-control-lg" placeholder="Hotéis, Restaurantes, Lojas, etc...">
-										<label for="termo">Procurar</label>
-									</div>
-								</div>
-								
-							</div>
-							<div class="form-row justify-content-center">
-								<div class="col-md-9 ">
-									<div class="form-label-group input-group">
-										<input type="text" name="local" id="local" class="form-control form-control-lg" placeholder="Onde? Endereço, Bairro, Cidade, Estado ou CEP">
-										<label for="local">Próximo de</label>
-										<div class="input-group-append">
-											<span class="input-group-text" id="basic-addon2" onclick="getLocation()"><span class="iconify mx-auto" data-icon="ic:baseline-gps-fixed" data-inline="false"></span></span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3 mt-3 mt-md-0">
-									<button type="submit" class="btn btn-laranja btn-block h-100 btn-lg" autocomplete="off">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-laranja" href="https://endlista.com.br/index.php?route=anunciante/cadastro"> Anuncie seu negócio</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="homeSearch" class="row text-center mb-5">
+                <div class="col-md-7 mx-auto my-5">
+                    <h1 class="my-4 mt-5">Busque empresas...</h1>
+                    <form id="search" name="search" class="needs-validation" action="https://endlista.com.br/pesquisar" method="get" autocomplete="off">
+                        <div class="form-row">
+                            <div class="col-md my-3">
+                                <div class="form-label-group">
+                                    <input type="text" name="termo" id="termo" required class="form-control form-control-lg" placeholder="Hotéis, Restaurantes, Lojas, etc...">
+                                    <label for="termo">Procurar</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="col-md-9 ">
+                                <div class="form-label-group input-group">
+                                    <input type="text" name="local" id="local" class="form-control form-control-lg" placeholder="Onde? Endereço, Bairro, Cidade, Estado ou CEP">
+                                    <label for="local">Próximo de</label>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2" onclick="getLocation()"><span class="iconify mx-auto" data-icon="ic:baseline-gps-fixed" data-inline="false"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mt-3 mt-md-0">
+                                <button type="submit" class="btn btn-laranja btn-block h-100 btn-lg" autocomplete="off">
 										 Encontrar
 									</button>
-								</div>
-							</div>
-						</form>
-					</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
-				</div>
-			
-				
-			</div>
-		</header>
-		
-				
+            </div>
 
-		<main role="main" class="home">
-			
 
-			
-            				<div class="container">
+        </div>
+    </header>
 
-<div class="row rowHomeFan">
-    <div class="col-lg-6">
-        <div class="card-deck homeFam  mt-lg-0 mt-3">
-            <div class="card border-0 shadow py-5">
-                <i class="fas fa-wifi fa-4x icon-base mx-auto"></i>
-                <div class="card-body px-4">
-                    <h5 class="card-title">
-                        Presença na Internet
-                    </h5>
-                    <p class="card-text">
-                    Seu anúncio aparece na hora exata em que o consumidor busca por seus
-                    produtos ou serviços, seja vindo na busca em nosso site
-                    ou  de sites de buscas.
-                    </p>
+
+
+    <main role="main" class="home">
+
+
+
+        <div class="container">
+
+            <div class="row rowHomeFan">
+                <div class="col-lg-6">
+                    <div class="card-deck homeFam  mt-lg-0 mt-3">
+                        <div class="card border-0 shadow py-5">
+                            <i class="fas fa-wifi fa-4x icon-base mx-auto"></i>
+                            <div class="card-body px-4">
+                                <h5 class="card-title">
+                                    Presença na Internet
+                                </h5>
+                                <p class="card-text">
+                                    Seu anúncio aparece na hora exata em que o consumidor busca por seus produtos ou serviços, seja vindo na busca em nosso site ou de sites de buscas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow py-5">
+                            <i class="fas fa-chart-pie fa-4x icon-base mx-auto"></i>
+                            <div class="card-body px-4">
+                                <h5 class="card-title">
+                                    Mais acessos
+                                </h5>
+                                <p class="card-text">
+                                    Sistema de pesquisa de anunciantes e recurso de pedir orçamentos através do nosso portal, ligando potenciais clientes aos nossos anunciantes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-deck homeFam  mt-lg-0 mt-3">
+                        <div class="card border-0 shadow py-5">
+                            <i class="fas fa-search fa-4x icon-base mx-auto"></i>
+                            <div class="card-body px-4">
+                                <h5 class="card-title">
+                                    Destaque em buscadores
+                                </h5>
+                                <p class="card-text">
+                                    Seus anúncios estarão sempre nas primeiras páginas ds buscadores, dando assim maior visibilidade para sua empresa.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow py-5">
+                            <i class="fas fa-dollar-sign fa-4x icon-base mx-auto"></i>
+                            <div class="card-body px-4">
+                                <h5 class="card-title">
+                                    Aumente as vendas
+                                </h5>
+                                <p class="card-text">
+                                    Seus anúncios aparecem 24h por dia, 7 dias por semana, para clientes que buscam o seu segmento.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="card border-0 shadow py-5">
-                <i class="fas fa-chart-pie fa-4x icon-base mx-auto"></i>
-                <div class="card-body px-4">
-                    <h5 class="card-title">
-                        Mais acessos
-                    </h5>
-                    <p class="card-text">
-                        Sistema de pesquisa de anunciantes e recurso de pedir orçamentos através do nosso portal, ligando potenciais clientes aos nossos anunciantes.
-                    </p>
+
+
+
+            <div class="row mt-5">
+                <div class="col center">
+                    <a href="https://endlista.com.br/index.php?route=anunciante/cadastro" class="btn btn-laranja-outline btn-lg">Quero cadastrar minha empresa</a>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col center">
+                    <h1 class="text-color-2 bold">O que você procura?</h1>
+                </div>
+            </div>
+
+
+            <div class="row mt-5 categories">
+                <div class="col-md">
+                    <h4><i class="fas fa-home"></i>Casa</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=materiais de construcao">Materiais de Constru&ccedil;&atilde;o</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=moveis">M&oacute;veis</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=decoradores">Decoradores</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=arquitetos">Arquitetos</a><br />
+                </div>
+                <div class="col-md">
+                    <h4><i class="fa fa-cutlery"></i>Alimenta&ccedil;&atilde;o</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=restaurante">Restaurantes</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=pizzaria">Pizzarias</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=lanchonete">Lanchonetes</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=rodizio">Rodizios</a><br />
+                </div>
+                <div class="col-md">
+                    <h4><i class="fas fa-heartbeat"></i>Saúde</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=farmacia">Farm&aacute;cias</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=hospital">Hospitais</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=veterinario">Veterin&aacute;rios</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=dentista">Dentistas</a><br />
+                </div>
+                <div class="col-md">
+                    <h4><i class="fas fa-car"></i>Automóveis</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=concessionaria">Concession&aacute;rias</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=autopecas">Autope&ccedil;as</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=oficina">Oficinas</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=moto">Motos</a><br />
+                </div>
+            </div>
+            <div class="row mt-5 mb-5 categories">
+                <div class="col-md">
+                    <h4><i class="fas fa-spa"></i>Bem-Estar</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=academias">Academias</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=cabelereiros">Cabelereiros</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=decoradores">Decoradores</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=arquitetos">Arquitetos</a><br />
+                </div>
+                <div class="col-md">
+                    <h4><i class="fas fa-wrench"></i>Serviços</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=Advogados">Advogados</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Contadores">Contadores</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Despachantes">Despachantes</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Limpeza e Conservação">Limpeza e Conservação</a><br />
+                </div>
+                <div class="col-md">
+                    <h4><i class="fas fa-paw"></i>Pet</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=clinicas veterinarias">Clinicas Veterinárias</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Médicos Veterinários">Médicos Veterinários </a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=pet shop">Pet shop</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Rações">Rações</a><br />
+                </div>
+                <div class="col-md">
+                    <h4><i class="fas fa-graduation-cap"></i>Educação</h4>
+                    <a href="https://endlista.com.br/pesquisar?termo=Escolas Infantis">Escolas Infantis</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Escolas de Idiomas">Escolas de Idiomas</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Escolas Particulares">Escolas Particulares</a><br />
+                    <a href="https://endlista.com.br/pesquisar?termo=Escolas Profissionalizantes">Escolas Profissionalizantes</a><br />
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <section id="como-funciona" class="content-section section-soft" aria-labelledby="como-funciona-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">Sua próxima busca começa aqui</span>
+                    <h2 id="como-funciona-title">Encontre o que precisa em três passos</h2>
+                    <p>Da pesquisa ao contato, um caminho simples para descobrir empresas e serviços.</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number" aria-hidden="true">01</span>
+                        <h3>Escolha o que procura</h3>
+                        <p>Digite o produto, serviço ou segmento no campo de busca. Você também pode explorar as categorias do site.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number" aria-hidden="true">02</span>
+                        <h3>Informe a região</h3>
+                        <p>Indique a cidade, o bairro ou o CEP para direcionar a pesquisa para a localização que faz sentido para você.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number" aria-hidden="true">03</span>
+                        <h3>Conheça as opções</h3>
+                        <p>Consulte as informações disponíveis nos resultados e use os canais de contato da empresa escolhida.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="divulgue" class="content-section business-banner" aria-labelledby="divulgue-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <span class="section-label">Para quem empreende</span>
+                        <h2 id="divulgue-title">Seu negócio merece ser encontrado</h2>
+                        <p class="my-4">Apresente sua empresa a quem está procurando pelo que você oferece. Reúna as informações do seu negócio e dê o próximo passo na sua divulgação.</p>
+                        <a class="btn banner-button" href="https://endlista.com.br/index.php?route=anunciante/cadastro">Quero divulgar minha empresa <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <ul class="business-checklist">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Apresente seus produtos e serviços</span></li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Facilite a localização da sua empresa</span></li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Mantenha seus canais de contato atualizados</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="content-section" aria-labelledby="beneficios-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <span class="section-label">Conexões que fazem sentido</span>
+                        <h2 id="beneficios-title" class="text-color-2 bold">Mais praticidade para buscar. Mais oportunidades para divulgar.</h2>
+                        <p class="mt-3">O EndLista reúne diferentes segmentos para aproximar quem precisa de uma solução de quem tem um negócio para apresentar.</p>
+                        <ul class="benefit-list">
+                            <li><i class="fas fa-search" aria-hidden="true"></i><span>Explore categorias para encontrar serviços do dia a dia.</span></li>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Direcione sua pesquisa para a região de interesse.</span></li>
+                            <li><i class="fas fa-store" aria-hidden="true"></i><span>Descubra estabelecimentos e profissionais de diferentes áreas.</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <div class="benefit-panel">
+                            <i class="fas fa-clipboard-check fa-3x mb-4 text-color-1" aria-hidden="true"></i>
+                            <h3>Uma boa apresentação começa com boas informações</h3>
+                            <p class="mt-3">Ao cadastrar sua empresa, tenha em mãos o nome do negócio, endereço, canais de contato e uma descrição clara do que você oferece.</p>
+                            <p>Já é anunciante? Acesse o painel para conferir as informações do seu cadastro.</p>
+                            <a class="btn btn-laranja-outline" href="https://endlista.com.br/index.php?route=anunciante/painel">Acessar painel do anunciante</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="duvidas" class="content-section section-soft" aria-labelledby="duvidas-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">Podemos ajudar</span>
+                    <h2 id="duvidas-title">Perguntas frequentes</h2>
+                    <p>Veja como pesquisar e dar os primeiros passos para divulgar seu negócio.</p>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Como encontro uma empresa ou serviço?</summary>
+                        <p>Use o campo “Procurar” no início da página, informe o que precisa e clique em “Encontrar”. Se preferir, escolha uma das categorias disponíveis.</p>
+                    </details>
+                    <details>
+                        <summary>Posso pesquisar em outra cidade?</summary>
+                        <p>Sim. Preencha o campo “Próximo de” com a cidade, bairro, endereço ou CEP desejado antes de iniciar a pesquisa.</p>
+                    </details>
+                    <details>
+                        <summary>Como faço para divulgar minha empresa?</summary>
+                        <p>Clique em “Quero divulgar minha empresa” para acessar a página de cadastro e consultar as orientações e condições disponíveis.</p>
+                    </details>
+                    <details>
+                        <summary>Onde acesso meu cadastro de anunciante?</summary>
+                        <p>Use o link “Painel do Anunciante” no menu ou o botão de acesso ao painel na seção de benefícios.</p>
+                    </details>
+                    <details>
+                        <summary>Como entro em contato com o EndLista?</summary>
+                        <p>Acesse a <a href="https://endlista.com.br/index.php?route=contact/contato">página de contato</a> para enviar sua mensagem à equipe.</p>
+                    </details>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-laranja-outline" href="https://endlista.com.br/index.php?route=contact/contato">Fale com nossa equipe</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md mb-4">
+                    <img src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br//assets/endlista/imagens/endlista azul.svg" alt="Logo" />
+                </div>
+                <div class="col-md ml-md-5 mb-4">
+                    <h4>Anuncie</h4>
+                    <a href="https://endlista.com.br/index.php?route=anunciante/cadastro">Crie um anuncio</a><br />
+                    <a href="https://endlista.com.br/index.php?route=anunciante/painel">Painel do anunciante</a>
+                </div>
+                <div class="col-md mb-4">
+                    <h4>Sobre</h4>
+                    <a href="https://endlista.com.br/index.php?route=contact/quemsomos">Quem Somos</a><br />
+                    <a href="https://endlista.com.br/index.php?route=contact/quemsomos/termos">Termos de uso e privacidade</a><br />
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="card-deck homeFam  mt-lg-0 mt-3">
-            <div class="card border-0 shadow py-5">
-                <i class="fas fa-search fa-4x icon-base mx-auto"></i>
-                <div class="card-body px-4">
-                    <h5 class="card-title">
-                        Destaque em buscadores
-                    </h5>
-                    <p class="card-text">
-                        Seus anúncios estarão sempre nas primeiras páginas ds buscadores, dando assim maior visibilidade para sua empresa.
-                    </p>
-                </div>
-            </div>
-            <div class="card border-0 shadow py-5">
-                <i class="fas fa-dollar-sign fa-4x icon-base mx-auto"></i>
-                <div class="card-body px-4">
-                    <h5 class="card-title">
-                        Aumente as vendas
-                    </h5>
-                    <p class="card-text">
-                        Seus anúncios aparecem 24h por dia, 7 dias por semana, para clientes que buscam o seu segmento.
-                    </p>
-                </div>
-            </div>
 
+        <div class="container company-details">
+            <p>ENDLISTA - EDITORA DE GUIAS E LISTAS LTDA</p>
+            <p>CNPJ: 04.578.893/0001-08</p>
+            <p>R MAJ SERTORIO, 200, ANDAR 5 CJ 502, VILA BUARQUE, SÃO PAULO - SP, 01222-000, Brasil.</p>
         </div>
-    </div>
-</div>
-
-
-
-<div class="row mt-5">
-    <div class="col center">
-        <a href="https://endlista.com.br/index.php?route=anunciante/cadastro" class="btn btn-laranja-outline btn-lg">Quero cadastrar minha empresa</a>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col center">
-        <h1 class="text-color-2 bold">O que você procura?</h1>
-    </div>
-</div>
-
-
-<div class="row mt-5 categories">
-    <div class="col-md">
-        <h4><i class="fas fa-home"></i>Casa</h4>
-        <a href="pesquisar?termo=materiais de construcao">Materiais de Constru&ccedil;&atilde;o</a><br />
-        <a href="pesquisar?termo=moveis">M&oacute;veis</a><br />
-        <a href="pesquisar?termo=decoradores">Decoradores</a><br />
-        <a href="pesquisar?termo=arquitetos">Arquitetos</a><br />
-    </div>
-    <div class="col-md">
-        <h4><i class="fa fa-cutlery"></i>Alimenta&ccedil;&atilde;o</h4>
-        <a href="pesquisar?termo=restaurante">Restaurantes</a><br />
-        <a href="pesquisar?termo=pizzaria">Pizzarias</a><br />
-        <a href="pesquisar?termo=lanchonete">Lanchonetes</a><br />
-        <a href="pesquisar?termo=rodizio">Rodizios</a><br />
-    </div>
-    <div class="col-md">
-        <h4><i class="fas fa-heartbeat"></i>Saúde</h4>
-        <a href="pesquisar?termo=farmacia">Farm&aacute;cias</a><br />
-        <a href="pesquisar?termo=hospital">Hospitais</a><br />
-        <a href="pesquisar?termo=veterinario">Veterin&aacute;rios</a><br />
-        <a href="pesquisar?termo=dentista">Dentistas</a><br />
-    </div>
-    <div class="col-md">
-        <h4><i class="fas fa-car"></i>Automóveis</h4>
-        <a href="pesquisar?termo=concessionaria">Concession&aacute;rias</a><br />
-        <a href="pesquisar?termo=autopecas">Autope&ccedil;as</a><br />
-        <a href="pesquisar?termo=oficina">Oficinas</a><br />
-        <a href="pesquisar?termo=moto">Motos</a><br />
-    </div>
-</div>
-<div class="row mt-5 mb-5 categories">
-    <div class="col-md">
-        <h4><i class="fas fa-spa"></i>Bem-Estar</h4>
-        <a href="pesquisar?termo=academias">Academias</a><br />
-        <a href="pesquisar?termo=cabelereiros">Cabelereiros</a><br />
-        <a href="pesquisar?termo=decoradores">Decoradores</a><br />
-        <a href="pesquisar?termo=arquitetos">Arquitetos</a><br />
-    </div>
-    <div class="col-md">
-        <h4><i class="fas fa-wrench"></i>Serviços</h4>
-        <a href="pesquisar?termo=Advogados">Advogados</a><br />
-        <a href="pesquisar?termo=Contadores">Contadores</a><br />
-        <a href="pesquisar?termo=Despachantes">Despachantes</a><br />
-        <a href="pesquisar?termo=Limpeza e Conservação">Limpeza e Conservação</a><br />
-    </div>
-    <div class="col-md">
-        <h4><i class="fas fa-paw"></i>Pet</h4>
-        <a href="pesquisar?termo=clinicas veterinarias">Clinicas Veterinárias</a><br />
-        <a href="pesquisar?termo=Médicos Veterinários">Médicos Veterinários </a><br />
-        <a href="pesquisar?termo=pet shop">Pet shop</a><br />
-        <a href="pesquisar?termo=Rações">Rações</a><br />
-    </div>
-    <div class="col-md">
-        <h4><i class="fas fa-graduation-cap"></i>Educação</h4>
-        <a href="pesquisar?termo=Escolas Infantis">Escolas Infantis</a><br />
-        <a href="pesquisar?termo=Escolas de Idiomas">Escolas de Idiomas</a><br />
-        <a href="pesquisar?termo=Escolas Particulares">Escolas Particulares</a><br />
-        <a href="pesquisar?termo=Escolas Profissionalizantes">Escolas Profissionalizantes</a><br />
-    </div>
-</div>
-
-
-    
-
-
-
-</div>
-</main>
-<div class="app-promo" name="appRoda" id="appRoda">
-    <div class="h-100 d-flex align-items-center">
-		<div class="container h-100 ">
-			<div class="row h-100 align-items-center">
-				<div class="col-md-5 ml-auto text-center mt-5 pt-5 mt-md-0 pt-md-0">
-					<div class="row">
-						<div class="col  mt-5 pt-5 mt-md-0 pt-md-0">
-							<h1 class="text-white">
-								Baixe o aplicativo
-							</h1>
-						</div>
-					</div>
-					<div class="row align-items-right">
-						<div class="col-sm mb-2 mb-sm-0 text-center">
-							<div> <a href="https://itunes.apple.com/br/app/endlista/id1076635922?mt=8" target="_blank"><img src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br/assets/images/Download_on_the_App_Store_Badge_PTBR_135x40.svg" class="btnImg appBotton" alt="Download on App Store"/></a> </div>
-						</div>
-						
-						<div class="col-sm mb-2 mb-sm-0 text-center">
-							<div>
-								<a href="https://play.google.com/store/apps/details?id=com.clasp.endlista" target="_blank"><img alt="Get it on Google Play" src="https://cdns1.exactiweb.com/clasp/public_html/clasp_com_br/assets/imagens/BOTAO-GOOGLE-PLAY.png" class="btnImg" /></a>
-							</div>
-						</div>
-				
-					</div>
-				</div>
-			</div>
-			
-		</div>
-        
-    </div>
-</div>
-
-<footer id="footer">
-	<div class="container">
-		<div class="row my-5">
-			<div class="col-md mb-4">
-				<img src="https://cdns2.exactiweb.com/clasp/public_html/endlista_com_br//assets/endlista/imagens/endlista azul.svg" alt="Logo" />
-			</div>
-			<div class="col-md ml-md-5 mb-4">
-				<h4>Anuncie</h4>
-				<a href="https://endlista.com.br/index.php?route=anunciante/cadastro">Crie um anuncio</a><br />
-				<a href="https://endlista.com.br/index.php?route=anunciante/painel">Painel do anunciante</a>
-			</div>
-			<div class="col-md mb-4">
-				<h4>Sobre</h4>
-				<a href="https://endlista.com.br/index.php?route=contact/quemsomos">Quem Somos</a><br />
-				<a href="https://endlista.com.br/index.php?route=contact/quemsomos/termos">Termos de uso e privacidade</a><br />
-			</div>
-			<div class="col-md mb-4" itemscope itemtype="https://schema.org/Organization">
-				<meta itemprop="name" content="ENDLISTA">
-				<h4>Contato</h4>
-				<i class="fas fa-envelope fa-lg"></i> <a href="mailto:endlista@endlista.com.br"><span itemprop="email">endlista@endlista.com.br</span></a><br>
-									<i class="fas fa-phone fa-lg fa-flip-horizontal"></i> <a href="tel:(11) 3258-2947"><span itemprop="telephone">(11) 3258-2947</span></a><br>
-								<i class="fas fa-comment-dots fa-lg"></i> <a href="https://endlista.com.br/index.php?route=contact/contato">Envie uma mensagem</a>
-			</div>
-		</div>
-	</div>
-
-	<div id="apressure" class="py-4">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-auto">
-					© 2021 - www.endlista.com.br - Todos os diretos reservados
-				</div>
-				<div class="col-md center">
-												</div>
-				<div class="col-md text-right">
-					Desenvolvido por <span><strong><a href="https://www.exacti.com.br">ExacTI</a></strong></span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	
+        <div id="apressure" class="py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-auto">
+                        © 2021 - www.endlista.com.br - Todos os diretos reservados
+                    </div>
+                    <div class="col-md center">
+                    </div>
+                    <div class="col-md text-right">
+                        Desenvolvido por <span><strong><a href="https://www.exacti.com.br">ExacTI</a></strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
 
 
-</footer>
-<script>
-	$("form").parsley({
-		errorClass: 'is-invalid text-danger',
-		successClass: 'is-valid', // Comment this option if you don't want the field to become green when valid. Recommended in Google material design to prevent too many hints for user experience. Only report when a field is wrong.
-		errorsWrapper: '<span class="form-text  invalid invalid-feedback"></span>',
-		errorTemplate: '<span></span>',
-		trigger: 'change'
-	});
-</script>
+
+
+    </footer>
+    <script>
+        $("form").parsley({
+            errorClass: 'is-invalid text-danger',
+            successClass: 'is-valid', // Comment this option if you don't want the field to become green when valid. Recommended in Google material design to prevent too many hints for user experience. Only report when a field is wrong.
+            errorsWrapper: '<span class="form-text  invalid invalid-feedback"></span>',
+            errorTemplate: '<span></span>',
+            trigger: 'change'
+        });
+    </script>
 
 </body>
+
 </html>
